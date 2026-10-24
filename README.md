@@ -1,61 +1,44 @@
-# TVmaze Explorer
+<div align="center">
 
-Aplicativo móvel desenvolvido com React Native e Expo para explorar séries e seus episódios usando a API pública TVmaze. A interface apresenta uma listagem em cartões e uma tela de episódios com temporada, número e título.
+# 📺 TVmaze Explorer
 
-## Recursos
+### Encontre uma série. Explore cada episódio.
 
-- Navegação entre listagem e detalhes com React Navigation Native Stack.
-- Séries e episódios obtidos com `fetch`, `async/await` e `useEffect`.
-- Estado de carregamento, erros de rede/API e listas vazias tratados nas telas.
-- Imagens ausentes tratadas com imagem substituta.
-- Layout em português, adaptado a telas móveis.
+Aplicativo móvel para descobrir séries e consultar seus episódios, com dados da API pública **TVmaze**.
 
-## Requisitos
+[Funcionalidades](#-funcionalidades) · [Tecnologias](#-tecnologias) · [Instalação](#-instalação) · [Execução](#-execução)
 
-- Node.js LTS e npm.
-- Expo Go em um celular ou um emulador Android/iOS configurado.
+</div>
 
-## Como executar
+---
 
-1. Extraia o ZIP e abra um terminal na pasta `tvmaze-expo`.
-2. Instale as dependências: `npm install`.
-3. Inicie o Expo: `npx expo start`.
-4. Leia o QR code com o Expo Go ou pressione `a` para abrir no emulador Android. Para iOS, pressione `i` em um Mac com simulador configurado.
+## ✨ Funcionalidades
 
-Também é possível executar no navegador com `npm run web`.
+- **Catálogo de séries** com imagem, título e gênero.
+- **Detalhes de episódios** com temporada, número e nome.
+- **Navegação em pilha** entre listagem e detalhes.
+- **Estados de carregamento e erro** nas telas que consultam a API.
+- **Tratamento de dados ausentes**, incluindo séries sem imagem e listas vazias.
 
-## Estrutura
+## 🧰 Tecnologias
 
-```text
-.
-├── App.js
-├── app.json
-├── index.js
-├── src/
-│   └── screens/
-│       ├── EpisodesScreen.js
-│       └── ShowsScreen.js
-├── package.json
-└── README.md
-```
+- React Native 0.81.5
+- Expo SDK 54
+- React Navigation Native Stack
+- JavaScript
+- API pública TVmaze
 
-## API
+## 🚀 Instalação
 
-- Séries: https://api.tvmaze.com/shows
-- Episódios: https://api.tvmaze.com/shows/{id}/episodes
+### Pré-requisitos
 
-O identificador é encaminhado à tela de episódios por `route.params`.
+- Node.js LTS e npm
+- Expo Go compatível com o SDK 54 **ou** Android Studio com um emulador configurado
+- Conexão com a internet
 
-## Capturas de tela para entrega
+Clone o repositório e instale as dependências:
 
-As imagens devem ser capturadas com o aplicativo realmente aberto, sem simulações. Com o Expo Go ou emulador rodando:
-
-1. Na listagem, aguarde os cartões aparecerem e faça uma captura de tela do dispositivo.
-2. Toque em uma série, aguarde os episódios carregarem e capture a tela de detalhes.
-3. Salve as imagens na pasta `screenshots/` (por exemplo, `shows.png` e `episodes.png`) e anexe-as junto ao link do repositório no Teams.
-
-Este pacote não inclui prints de execução. Neste ambiente não foi possível confirmar a execução visual em emulador ou dispositivo.
-
-## GitHub
-
-O `.gitignore` exclui `node_modules`, `.expo`, saídas web e arquivos locais. Para publicar, crie um repositório público, faça o commit dos arquivos deste projeto e envie o link junto das duas capturas reais.
+```bash
+git clone https://github.com/SEU-USUARIO/tvmaze-expo.git
+cd tvmaze-expo
+npm install

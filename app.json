@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "TVmaze Explorer",
+    "slug": "tvmaze-explorer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {"backgroundColor": "#101827"},
+    "ios": {"supportsTablet": true},
+    "android": {"adaptiveIcon": {"backgroundColor": "#101827"}},
+    "web": {"bundler": "metro"}
+  }
+}

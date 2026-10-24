@@ -40,7 +40,7 @@ Adicione capturas reais do aplicativo em execução à pasta `screenshots/` e at
 
 | Catálogo de séries | Episódios da série |
 |:---:|:---:|
-| ![Tela de listagem das séries](screenshots/shows.png) | ![Tela com episódios da série selecionada](screenshots/episodes.png) |
+| ![Tela de listagem das séries](screenshots/tela_inicio.png) | ![Tela com episódios da série selecionada](screenshots/tela_listagem.png) |
 
 > As capturas devem ser feitas com o aplicativo aberto no Expo Go ou em um emulador Android. Não use imagens ilustrativas como se fossem capturas reais do app.
 

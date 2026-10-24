@@ -2,43 +2,71 @@
 
 # 📺 TVmaze Explorer
 
-### Encontre uma série. Explore cada episódio.
+### Seu próximo episódio começa aqui.
 
-Aplicativo móvel para descobrir séries e consultar seus episódios, com dados da API pública **TVmaze**.
+Explore séries, conheça seus detalhes e consulte episódios em uma experiência móvel simples, rápida e intuitiva.
 
-[Funcionalidades](#-funcionalidades) · [Tecnologias](#-tecnologias) · [Instalação](#-instalação) · [Execução](#-execução)
+<br>
+
+![React Native](https://img.shields.io/badge/React_Native-0.81.5-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-SDK_54-000020?style=for-the-badge&logo=expo&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TVmaze API](https://img.shields.io/badge/API-TVmaze-3F51B5?style=for-the-badge)
 
 </div>
 
 ---
 
+## 📖 Sobre o projeto
+
+O **TVmaze Explorer** é um aplicativo desenvolvido com React Native e Expo para consultar o catálogo público da TVmaze. Na tela inicial, as séries são apresentadas em uma lista visual. Ao selecionar uma delas, o aplicativo abre uma segunda tela com seus episódios, organizados por temporada e número.
+
+O projeto demonstra conceitos fundamentais do desenvolvimento móvel: navegação entre telas, renderização de listas, chamadas assíncronas a uma API e apresentação de estados de carregamento e erro.
+
 ## ✨ Funcionalidades
 
-- **Catálogo de séries** com imagem, título e gênero.
-- **Detalhes de episódios** com temporada, número e nome.
-- **Navegação em pilha** entre listagem e detalhes.
-- **Estados de carregamento e erro** nas telas que consultam a API.
-- **Tratamento de dados ausentes**, incluindo séries sem imagem e listas vazias.
+- **Catálogo de séries:** exibe séries obtidas da API TVmaze com imagem, título e gênero.
+- **Detalhes da série:** abre a lista de episódios da série selecionada.
+- **Informações dos episódios:** apresenta temporada, número e nome.
+- **Navegação em pilha:** usa React Navigation Native Stack para alternar entre listagem e detalhes.
+- **Carregamento visível:** mostra um indicador enquanto os dados são buscados.
+- **Tratamento de erros:** informa quando uma chamada à API falha.
+- **Dados opcionais protegidos:** imagens ou campos ausentes não interrompem o aplicativo.
+- **Lista vazia tratada:** informa quando não há episódios disponíveis.
 
-## 🧰 Tecnologias
+## 🖼️ Capturas de tela
 
-- React Native 0.81.5
-- Expo SDK 54
-- React Navigation Native Stack
-- JavaScript
-- API pública TVmaze
+Adicione capturas reais do aplicativo em execução à pasta `screenshots/` e atualize os caminhos, se necessário.
 
-## 🚀 Instalação
+| Catálogo de séries | Episódios da série |
+|:---:|:---:|
+| ![Tela de listagem das séries](screenshots/shows.png) | ![Tela com episódios da série selecionada](screenshots/episodes.png) |
 
-### Pré-requisitos
+> As capturas devem ser feitas com o aplicativo aberto no Expo Go ou em um emulador Android. Não use imagens ilustrativas como se fossem capturas reais do app.
 
-- Node.js LTS e npm
-- Expo Go compatível com o SDK 54 **ou** Android Studio com um emulador configurado
-- Conexão com a internet
+## 🧰 Tecnologias e ferramentas
 
-Clone o repositório e instale as dependências:
+| Tecnologia | Uso |
+|---|---|
+| [React Native](https://reactnative.dev/) | Construção da interface móvel |
+| [Expo](https://expo.dev/) | Ambiente de desenvolvimento e execução |
+| [React Navigation](https://reactnavigation.org/) | Navegação entre as telas |
+| JavaScript | Lógica e componentes da aplicação |
+| [TVmaze API](https://www.tvmaze.com/api) | Dados públicos de séries e episódios |
 
-```bash
-git clone https://github.com/SEU-USUARIO/tvmaze-expo.git
-cd tvmaze-expo
-npm install
+## 🧠 Conceitos aplicados
+
+- `useState` para controlar dados, carregamento e mensagens de erro.
+- `useEffect` para buscar os dados quando cada tela é aberta.
+- `fetch` com `async/await` para consultar a API.
+- `try/catch/finally` para tratar falhas e finalizar o estado de carregamento.
+- `FlatList` para renderizar listas com desempenho adequado.
+- `route.params` para enviar o identificador e o nome da série à tela de episódios.
+- Verificação de campos opcionais para evitar falhas quando a API retorna valores `null`.
+
+## 🌐 Endpoints utilizados
+
+### Séries
+
+```text
+GET https://api.tvmaze.com/shows
